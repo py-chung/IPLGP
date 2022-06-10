@@ -2,7 +2,7 @@
 % Please edit documentation in R/simu.gamete.R
 \name{simu.gamete}
 \alias{simu.gamete}
-\title{Simulate The Genotypic Values Of A Gamete}
+\title{Simulate The Genotype Of A Gamete}
 \usage{
 simu.gamete(marker)
 }
@@ -16,8 +16,8 @@ indicates the genotype of the marker (numeric or character).}
 The SNP sequence of gamete.
 }
 \description{
-Generate the genotypic values of a gamete from the genotypic data of its
-parents by Monte Carlo simulation. The recombination rate is caculate by
+Generate the genotype of a gamete from the genotypic data of its
+parents by Monte Carlo simulation. The recombination rate is calculate by
 Haldane’s mapping function.
 }
 \examples{
