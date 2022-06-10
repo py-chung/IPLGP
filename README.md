@@ -20,4 +20,5 @@ install.packages("IPLGP")
   
 ## Main functions
   
-+ `GA.Dscore` Fonction for getting a set with largest D-score
++ `GA.Dscore` Fonction for getting a set with highest D-score by genetic algorithm 
++ `GBLUP.fit` Fonction for getting the fitting values of a set of individuals by GBLUP
