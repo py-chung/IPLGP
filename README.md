@@ -31,7 +31,9 @@ install.packages("IPLGP")
 More information can be seen in the following file:  
 [Package ‘IPLGP’](https://cran.r-project.org/web/packages/IPLGP/IPLGP.pdf)
   
-## References
+## Citing this package
   
 For more imformation about our method, please check our published article:  
 + Chung PY, Liao CT. 2020. Identification of superior parental lines for biparental crossing via genomic prediction. PLoS ONE 15(12):e0243159. doi:[10.1371/journal.pone.0243159](https://journals.plos.org/plosone/article/authors?id=10.1371/journal.pone.0243159)
+  
+If you use IPLGP in your research, we would appreciate your citation of the study article.
