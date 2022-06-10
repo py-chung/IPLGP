@@ -7,18 +7,18 @@ For more imformation about our method, please check our published article:
   
 ## Installation
   
-IPLGP can be installed form GitHub by the following command  
+IPLGP can be installed form GitHub by the following command:  
 ```install_github
 # library(devtools)  
 install_github("py-chung/IPLGP", dependencies = TRUE, force = TRUE)
 ```
   
-And IPLGP can be installed form CRAN by the following command
+And IPLGP can be installed form CRAN by the following command:
 ```install.packages
 install.packages("IPLGP")
 ```
   
 ## Main functions
   
-+ `GA.Dscore` Fonction for getting a set with highest D-score by genetic algorithm 
-+ `GBLUP.fit` Fonction for getting the fitting values of a set of individuals by GBLUP
++ `GA.Dscore` Fonction for getting a set with highest D-score by genetic algorithm. 
++ `GBLUP.fit` Fonction for getting the fitting values of a set of individuals by GBLUP.
