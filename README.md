@@ -13,7 +13,7 @@ IPLGP can be installed form GitHub by the following command
 install_github("py-chung/IPLGP", dependencies = TRUE, force = TRUE)
 ```
   
-And IPLGP can be installed form RCAN by the following command
+And IPLGP can be installed form CRAN by the following command
 ```install.packages
 install.packages("IPLGP")
 ```
