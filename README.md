@@ -5,6 +5,6 @@ In this package, we provide a tool to select parental lines for multiple traits 
 For more imformation about our method, please check our published article:  
 + Chung PY, Liao CT. 2020. Identification of superior parental lines for biparental crossing via genomic prediction. PLoS ONE 15(12):e0243159. doi:[10.1371/journal.pone.0243159](https://journals.plos.org/plosone/article/authors?id=10.1371/journal.pone.0243159)
   
-##Installation
+## Installation
   
 1
