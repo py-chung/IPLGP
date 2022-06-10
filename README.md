@@ -7,4 +7,7 @@ For more imformation about our method, please check our published article:
   
 ## Installation
   
-1
+IPLGP can be installed form GitHub by the following command  
+```install_github
+install_github("py-chung/IPLGP", dependencies = TRUE, force = TRUE)
+```
