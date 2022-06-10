@@ -1,7 +1,7 @@
 Package: IPLGP
 Type: Package
 Title: Identification of Parental Lines via Genomic Prediction
-Version: 2.0.0
+Version: 2.0.1
 Authors@R: c(
     person("Ping-Yuan", "Chung", email = "r06621204@ntu.edu.tw", role = "cre"),
     person("Chen-Tuo", "Liao", email = "ctliao@ntu.edu.tw", role = "aut"))
@@ -17,11 +17,13 @@ Description:
     GEBVs of the target traits, and then a selection index is adopted to evaluate 
     the composite performance of an individual.
 Imports: ggplot2, sommer, grDevices, stats
+URL: https://github.com/py-chung/IPLGP
+BugReports: https://github.com/py-chung/IPLGP/issues
 License: GPL-2
 Encoding: UTF-8
 RoxygenNote: 7.1.1
 NeedsCompilation: no
-Packaged: 2021-12-13 05:30:02 UTC; pingyuan
+Packaged: 2022-06-10 11:50:44 UTC; pingyuan
 Author: Ping-Yuan Chung [cre],
   Chen-Tuo Liao [aut]
 Maintainer: Ping-Yuan Chung <r06621204@ntu.edu.tw>

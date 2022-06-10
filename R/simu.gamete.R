@@ -1,7 +1,7 @@
-#' Simulate The Genotypic Values Of A Gamete
+#' Simulate The Genotype Of A Gamete
 #'
-#' Generate the genotypic values of a gamete from the genotypic data of its
-#' parents by Monte Carlo simulation. The recombination rate is caculate by
+#' Generate the genotype of a gamete from the genotypic data of its
+#' parents by Monte Carlo simulation. The recombination rate is calculate by
 #' Haldane’s mapping function.
 #'
 #' @param marker data frame. A p*4 data frame whose first column indicates the
