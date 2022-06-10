@@ -17,3 +17,5 @@ And IPLGP can be installed form CRAN by the following command
 ```install.packages
 install.packages("IPLGP")
 ```
+  
+## Main functions
