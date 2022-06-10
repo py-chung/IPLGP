@@ -19,3 +19,5 @@ install.packages("IPLGP")
 ```
   
 ## Main functions
+  
++ `GA.Dscore` Fonction for getting a set with largest D-score
