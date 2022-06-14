@@ -33,6 +33,14 @@ More information can be seen in the following file:
   
 ## Example dataset
   
+```load.url
+load(url("https://github.com/py-chung/IPLGP/raw/main/inst/extdata/phe.trop.RDATA"))
+```
+  
+```load.sys
+load(system.file("extdata", "snp.trop.RDATA", package = "IPLGP"))
+```
+  
 ## Citing this package
   
 For more imformation about our method, please check our published article:  
