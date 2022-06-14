@@ -31,6 +31,8 @@ install.packages("IPLGP")
 More information can be seen in the following file:  
 [Package ‘IPLGP’](https://cran.r-project.org/web/packages/IPLGP/IPLGP.pdf)
   
+## Example dataset
+  
 ## Citing this package
   
 For more imformation about our method, please check our published article:  
