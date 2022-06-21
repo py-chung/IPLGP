@@ -33,6 +33,8 @@ More information can be seen in the following file:
   
 ## Example dataset
   
+The rice genome dataset we used in our study was presented in [Spindel et al. (2015)](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1005350).
+  
 ```load.url
 load(url("https://github.com/py-chung/IPLGP/raw/main/inst/extdata/phe.trop.RDATA"))
 ```
