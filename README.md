@@ -33,9 +33,10 @@ More information can be seen in the following file:
   
 ## Example dataset
   
-The rice genome dataset we used in our study was presented in [Spindel et al. (2015)](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1005350).
+The example dataset is provided to test this package. The rice genome dataset we used in our study was presented in [Spindel et al. (2015)](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1005350). The data was processed by us and contains 328 individuals and 10772 SNPs. The SNP data and phenotype data can be download from GitHub by the following command:
   
 ```load.url
+load(url("https://github.com/py-chung/IPLGP/raw/main/inst/extdata/snp.trop.RDATA"))
 load(url("https://github.com/py-chung/IPLGP/raw/main/inst/extdata/phe.trop.RDATA"))
 ```
   
