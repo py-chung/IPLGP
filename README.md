@@ -26,7 +26,7 @@ install.packages("IPLGP")
 + `simu.GEBVO()` Fonction for simulating the progeny with GEBV-O strategy.
 + `simu.GEBVGD()` Fonction for simulating the progeny with GEBV-GD strategy.
 + `output.best()` Fonction for obtaining the GEBV average curves and the summary statistics form the output of simulation test.
-+ `output.gain()` Fonction for obtaining the genetic gain average for each target trait.
++ `output.gain()` Fonction for obtaining the genetic gain average for each target trait form the output of simulation test.
   
 More information can be seen in the following file:  
 [Package ‘IPLGP’](https://cran.r-project.org/web/packages/IPLGP/IPLGP.pdf)
