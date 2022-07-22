@@ -122,12 +122,12 @@ GBLUP.fit and mmer, that can be seen in the Examples shown below.
 \examples{
 # generate simulated data
 set.seed(2000)
-t1 <- rnorm(10,30,10)
-t2 <- rnorm(10,10,5)
+geno.test <- matrix(sample(c(1, -1), 200, replace = TRUE), 10, 20)
+t1 <- geno.test[,3]+0.5*geno.test[,7]-0.3*geno.test[,11]+rnorm(10,30,10)
+t2 <- geno.test[,3]+0.3*geno.test[,12]-0.5*geno.test[,18]+rnorm(10,10,5)
 t3 <- NULL
 t4 <- NULL
 t5 <- NULL
-geno.test <- matrix(sample(c(1, -1), 200, replace = TRUE), 10, 20)
 marker.test <- cbind(rep(1:2, each=10), rep(seq(0, 90, 10), 2))
 fit <- GBLUP.fit(t1, t2, t3, t4, t5, geno = geno.test)
 fitvalue <- fit$fitted.value
@@ -144,11 +144,11 @@ result$suggested.subset
 # other method: use mmer to obtain the fitted value
 \dontrun{
 set.seed(2000)
-t1 <- rnorm(10,30,10)
-t2 <- rnorm(10,10,5)
+geno.test <- matrix(sample(c(1, -1), 200, replace = TRUE), 10, 20)
+t1 <- geno.test[,3]+0.5*geno.test[,7]-0.3*geno.test[,11]+rnorm(10,30,10)
+t2 <- geno.test[,3]+0.3*geno.test[,12]-0.5*geno.test[,18]+rnorm(10,10,5)
 phe <- cbind(t1, t2)
 nt <- ncol(phe)
-geno.test <- matrix(sample(c(1, -1), 200, replace = TRUE), 10, 20)
 marker.test <- cbind(rep(1:2, each=10), rep(seq(0, 90, 10), 2))
 rownames(geno.test) <- 1:nrow(geno.test)
 id <- rownames(geno.test)
@@ -156,10 +156,10 @@ K0 <- geno.test\%*\%t(geno.test)/ncol(geno.test)
 
 dat <- data.frame(id, phe)
 fit0 <- sommer::mmer(cbind(t1, t2)~1,
-      random = ~sommer::vs(id, Gu = K0, Gtc = sommer::unsm(nt)),
-      rcov = ~sommer::vs(units, Gtc = sommer::unsm(nt)),
+      random = ~sommer::vsr(id, Gu = K0, Gtc = sommer::unsm(nt)),
+      rcov = ~sommer::vsr(units, Gtc = sommer::unsm(nt)),
       data = dat,
-      tolparinv = 0.01)
+      tolParInv = 0.1)
 
 u0 <- fit0$U$`u:id`
 fit <- matrix(unlist(u0), ncol = nt)

@@ -99,7 +99,7 @@ GBLUP.fit <- function(t1, t2, t3, t4, t5, geno = NULL, K = NULL, outcross = FALS
     id <- rownames(KA)
 
     dat <- data.frame(id,phe)
-    r.variable <- ~sommer::vs(id, Gu = KA, Gtc = sommer::unsm(nt))
+    r.variable <- ~sommer::vsr(id, Gu = KA, Gtc = sommer::unsm(nt))
   } else {
     tg <- table(as.matrix(geno))
     if(FALSE %in% (names(tg) %in% c(1, 0, -1))){
@@ -126,7 +126,7 @@ GBLUP.fit <- function(t1, t2, t3, t4, t5, geno = NULL, K = NULL, outcross = FALS
       dat$id1 <- factor(id1)
       dat$id2 <- factor(id2)
 
-      r.variable <- ~sommer::vs(id1, Gu = KA, Gtc = sommer::unsm(nt)) + sommer::vs(id2, Gu = KD, Gtc = sommer::unsm(nt))
+      r.variable <- ~sommer::vsr(id1, Gu = KA, Gtc = sommer::unsm(nt)) + sommer::vsr(id2, Gu = KD, Gtc = sommer::unsm(nt))
     } else {
       rownames(geno) <- 1:nrow(geno)
       id <- rownames(geno)
@@ -134,7 +134,7 @@ GBLUP.fit <- function(t1, t2, t3, t4, t5, geno = NULL, K = NULL, outcross = FALS
 
       dat <- data.frame(id,phe)
 
-      r.variable <- ~sommer::vs(id, Gu = KA, Gtc = sommer::unsm(nt))
+      r.variable <- ~sommer::vsr(id, Gu = KA, Gtc = sommer::unsm(nt))
     }
   }
 
@@ -147,33 +147,33 @@ GBLUP.fit <- function(t1, t2, t3, t4, t5, geno = NULL, K = NULL, outcross = FALS
     t1 <- c(phe)
     fit <- sommer::mmer(t1~1,
                         random = r.variable,
-                        rcov = ~sommer::vs(units, Gtc = sommer::unsm(nt)),
+                        rcov = ~sommer::vsr(units, Gtc = sommer::unsm(nt)),
                         data = dat)
 
     tol <- 10^-5
     while(length(fit) == 0){
-      cat("Try bigger tolparinv. tolparinv:", tol, "\n")
+      cat("Try bigger tolParInv. tolParInv:", tol, "\n")
       fit <- sommer::mmer(t1~1,
                           random = r.variable,
-                          rcov = ~sommer::vs(units, Gtc = sommer::unsm(nt)),
+                          rcov = ~sommer::vsr(units, Gtc = sommer::unsm(nt)),
                           data = dat,
-                          tolparinv = tol)
+                          tolParInv = tol)
       tol <- tol*10
     }
   } else {
     fit <- sommer::mmer(cbind(t1, t2, t3, t4, t5)~1,
                         random = r.variable,
-                        rcov = ~sommer::vs(units, Gtc = sommer::unsm(nt)),
+                        rcov = ~sommer::vsr(units, Gtc = sommer::unsm(nt)),
                         data = dat)
 
     tol <- 10^-5
     while(length(fit) == 0){
-      cat("Try bigger tolparinv. tolparinv:", tol, "\n")
+      cat("Try bigger tolParInv. tolParInv:", tol, "\n")
       fit <- sommer::mmer(cbind(t1, t2, t3, t4, t5)~1,
                           random = r.variable,
-                          rcov = ~sommer::vs(units, Gtc = sommer::unsm(nt)),
+                          rcov = ~sommer::vsr(units, Gtc = sommer::unsm(nt)),
                           data = dat,
-                          tolparinv = tol)
+                          tolParInv = tol)
       tol <- tol*10
     }
   }
