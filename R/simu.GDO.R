@@ -98,8 +98,8 @@
 #' # generate simulated data
 #' set.seed(2000)
 #' geno.test <- matrix(sample(c(1, -1), 200, replace = TRUE), 10, 20)
-#' t1 <- geno.test[,3]+0.5*geno.test[,7]-0.3*geno.test[,11]+rnorm(10,30,10)
-#' t2 <- geno.test[,3]+0.3*geno.test[,12]-0.5*geno.test[,18]+rnorm(10,10,5)
+#' t1 <- 5*geno.test[,3]+3*geno.test[,7]-geno.test[,11]+rnorm(10,30,10)
+#' t2 <- 3*geno.test[,3]+geno.test[,12]-2*geno.test[,18]+rnorm(10,10,5)
 #' t3 <- NULL
 #' t4 <- NULL
 #' t5 <- NULL
@@ -118,10 +118,10 @@
 #'
 #' # other method: use mmer to obtain the fitted value
 #' \dontrun{
-#' set.seed(2000)
+#' set.seed(8000)
 #' geno.test <- matrix(sample(c(1, -1), 200, replace = TRUE), 10, 20)
-#' t1 <- geno.test[,3]+0.5*geno.test[,7]-0.3*geno.test[,11]+rnorm(10,30,10)
-#' t2 <- geno.test[,3]+0.3*geno.test[,12]-0.5*geno.test[,18]+rnorm(10,10,5)
+#' t1 <- 5*geno.test[,3]+3*geno.test[,7]-geno.test[,11]+rnorm(10,30,10)
+#' t2 <- 3*geno.test[,3]+geno.test[,12]-2*geno.test[,18]+rnorm(10,10,5)
 #' phe <- cbind(t1, t2)
 #' nt <- ncol(phe)
 #' marker.test <- cbind(rep(1:2, each=10), rep(seq(0, 90, 10), 2))
