@@ -50,7 +50,7 @@ load(system.file("extdata", "phe.trop.RDATA", package = "IPLGP"))
 ## Citing this package
   
 For more imformation about our method, please check our published article:  
-+ Ping-Yuan Chung, Chen-Tuo Liao. 2020. Identification of superior parental lines for biparental crossing via genomic prediction. PLoS ONE 15(12):e0243159. doi:[10.1371/journal.pone.0243159](https://journals.plos.org/plosone/article/authors?id=10.1371/journal.pone.0243159)
++ Ping-Yuan Chung, Chen-Tuo Liao. 2020. Identification of superior parental lines for biparental crossing via genomic prediction. PLoS ONE 15(12):e0243159. doi: [10.1371/journal.pone.0243159](https://journals.plos.org/plosone/article/authors?id=10.1371/journal.pone.0243159)
 + Ping-Yuan Chung,Chen-Tuo Liao. 2022. Selection of parental lines for plant breeding via genomic prediction. Front Plant Sci. 2022; 13: 934767. doi: [10.3389/fpls.2022.934767](https://www.frontiersin.org/articles/10.3389/fpls.2022.934767/full)
   
 If you use IPLGP in your research, we would appreciate your citation of the study article.
