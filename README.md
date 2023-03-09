@@ -1,6 +1,6 @@
 # IPLGP
 
-In this package, we provide a tool to select parental lines for multiple traits in plant breeding. To confirm the potential of a set of parental lines, this package provides two useful tools. One is *D-score*, which is a new criteri we proposed in our study for determine the potential of a set of parental line. The other is the simulation test of the breeding process. There are three strategy in our simulation test, which is (i) GEBV-O considers only genomic estimated breeding values (GEBVs) of the candidate individuals; (ii) GD-O considers only genomic diversity (GD) of the candidate individuals; and (iii) GEBV-GD considers both GEBV and GD.   
+In this package, we provide a tool to select parental lines for multiple traits in plant breeding. To confirm the potential of a set of parental lines, this package provides two useful tools. One is *D-score*, which is a new criterion we proposed in our study for determine the potential of a set of parental line. The other is the simulation test of the breeding process. There are three strategy in our simulation test, which is (i) GEBV-O considers only genomic estimated breeding values (GEBVs) of the candidate individuals; (ii) GD-O considers only genomic diversity (GD) of the candidate individuals; and (iii) GEBV-GD considers both GEBV and GD.   
   
 ## Installation
   
