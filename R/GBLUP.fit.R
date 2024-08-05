@@ -51,6 +51,7 @@
 #'
 #' @examples
 #' # generate simulated data
+#' set.seed(2000)
 #' t1 <- rnorm(50,30,10)
 #' t2 <- rnorm(50,10,5)
 #' t3 <- rnorm(50,20,20)

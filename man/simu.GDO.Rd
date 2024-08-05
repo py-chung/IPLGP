@@ -66,7 +66,7 @@ traits in selection index. If weight is set to be NULL, the equal weight will
 be assigned to all the target traits. The weights should be a positive number.}
 
 \item{direction}{vector. A vector with length t indicates the selecting
-directions for target traits. The elements of direction are Inf, or -inf
+directions for target traits. The elements of direction are Inf, or -Inf
 representing the rule that the larger the better; or the smaller the better.
 Or if the element is a number, it will select the individuals with the trait
 value close to the number. If direction is set to be NULL, the selecting
@@ -121,7 +121,7 @@ GBLUP.fit and mmer, that can be seen in the Examples shown below.
 }
 \examples{
 # generate simulated data
-set.seed(2000)
+set.seed(6000)
 geno.test <- matrix(sample(c(1, -1), 200, replace = TRUE), 10, 20)
 t1 <- 5*geno.test[,3]+3*geno.test[,7]-geno.test[,11]+rnorm(10,30,10)
 t2 <- 3*geno.test[,3]+geno.test[,12]-2*geno.test[,18]+rnorm(10,10,5)
@@ -143,7 +143,7 @@ result$suggested.subset
 
 # other method: use mmer to obtain the fitted value
 \dontrun{
-set.seed(8000)
+set.seed(6000)
 geno.test <- matrix(sample(c(1, -1), 200, replace = TRUE), 10, 20)
 t1 <- 5*geno.test[,3]+3*geno.test[,7]-geno.test[,11]+rnorm(10,30,10)
 t2 <- 3*geno.test[,3]+geno.test[,12]-2*geno.test[,18]+rnorm(10,10,5)
