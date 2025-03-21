@@ -1,29 +1,55 @@
-Package: IPLGP
+Package: QTLEMM
 Type: Package
-Title: Identification of Parental Lines via Genomic Prediction
-Version: 2.0.5
+Title: QTL EM Algorithm Mapping and Hotspots Detection
+Version: 3.0.1
 Authors@R: c(
-    person("Ping-Yuan", "Chung", email = "r06621204@ntu.edu.tw", role = "cre"),
-    person("Chen-Tuo", "Liao", email = "ctliao@ntu.edu.tw", role = "aut"))
+    person("Ping-Yuan", "Chung", email = "pychung@webmail.stat.sinica.edu.tw", role = "cre"),
+    person("Chen-Hung", "Kao", email = "chkao@webmail.stat.sinica.edu.tw", role = "aut"),
+    person("Y.-T.", "Guo", role = "aut"),
+    person("H.-N.", "Ho", role = "aut"),
+    person("H.-I.", "Lee", role = "aut"),
+    person("P.-Y.", "Wu", role = "aut"),
+    person("M.-H.", "Yang", role = "aut"),
+    person("M.-H.", "Zeng", role = "aut"))
 Description: 
-    Combining genomic prediction with Monte Carlo simulation, three different 
-    strategies are implemented to select parental lines for multiple traits in plant 
-    breeding. The selection strategies include (i) GEBV-O considers only genomic 
-    estimated breeding values (GEBVs) of the candidate individuals; (ii) GD-O 
-    considers only genomic diversity (GD) of the candidate individuals; and (iii) 
-    GEBV-GD considers both GEBV and GD. The above method can be seen in Chung PY, 
-    Liao CT (2020) <doi:10.1371/journal.pone.0243159>. Multi-trait genomic best 
-    linear unbiased prediction (MT-GBLUP) model is used to simultaneously estimate 
-    GEBVs of the target traits, and then a selection index is adopted to evaluate 
-    the composite performance of an individual.
-Imports: ggplot2, sommer, grDevices, stats
-URL: https://github.com/py-chung/IPLGP
-BugReports: https://github.com/py-chung/IPLGP/issues
+    For QTL mapping, this package comprises several functions designed to execute diverse 
+    tasks, such as simulating or analyzing data, calculating significance thresholds, and 
+    visualizing QTL mapping results. The single-QTL or multiple-QTL method, which enables 
+    the fitting and comparison of various statistical models, is employed to analyze the 
+    data for estimating QTL parameters. The models encompass linear regression, permutation 
+    tests, normal mixture models, and truncated normal mixture models. The Gaussian stochastic 
+    process is utilized to compute significance thresholds for QTL detection on a genetic 
+    linkage map within experimental populations. Two types of data, complete genotyping, and 
+    selective genotyping data from various experimental populations, including backcross, F2, 
+    recombinant inbred (RI) populations, and advanced intercrossed (AI) populations, are 
+    considered in the QTL mapping analysis. For QTL hotspot detection, statistical methods can 
+    be developed based on either utilizing individual-level data or summarized data. We have 
+    proposed a statistical framework capable of handling both individual-level data and 
+    summarized QTL data for QTL hotspot detection. Our statistical framework can overcome the 
+    underestimation of thresholds resulting from ignoring the correlation structure among 
+    traits. Additionally, it can identify different types of hotspots with minimal computational 
+    cost during the detection process. Here, we endeavor to furnish the R codes for our QTL 
+    mapping and hotspot detection methods, intended for general use in genes, genomics, and 
+    genetics studies. The QTL mapping methods for the complete and selective genotyping designs 
+    are based on the multiple interval mapping (MIM) model proposed by Kao, C.-H. , Z.-B. Zeng 
+    and R. D. Teasdale (1999) <doi: 10.1534/genetics.103.021642> and H.-I Lee, H.-A. Ho and 
+    C.-H. Kao (2014) <doi: 10.1534/genetics.114.168385>, respectively. The QTL hotspot detection 
+    analysis is based on the method by Wu, P.-Y., M.-.H. Yang, and C.-H. Kao (2021) 
+    <doi: 10.1093/g3journal/jkab056>.
+Imports: mvtnorm, utils, stats, graphics, grDevices, gtools
+URL: https://github.com/py-chung/QTLEMM
+BugReports: https://github.com/py-chung/QTLEMM/issues
 License: GPL-2
 Encoding: UTF-8
 RoxygenNote: 7.3.2
 NeedsCompilation: no
-Packaged: 2024-08-01 09:15:22 UTC; pingyuan
+Packaged: 2025-03-11 09:27:42 UTC; pingyuan
 Author: Ping-Yuan Chung [cre],
-  Chen-Tuo Liao [aut]
-Maintainer: Ping-Yuan Chung <r06621204@ntu.edu.tw>
+  Chen-Hung Kao [aut],
+  Y.-T. Guo [aut],
+  H.-N. Ho [aut],
+  H.-I. Lee [aut],
+  P.-Y. Wu [aut],
+  M.-H. Yang [aut],
+  M.-H. Zeng [aut]
+Maintainer: Ping-Yuan Chung <pychung@webmail.stat.sinica.edu.tw>
